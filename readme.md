@@ -42,6 +42,24 @@ Don't forget to refresh your bash profile:
     
 Once this is completed, let's run *vup* to start up and provision your development environment.
 
+## Installing VVV Site Wizard
+
+    $ brew install tinypint/vv/vv
+
+Information on the VV Site Wizard forked from Brad Parbs (https://github.com/bradp/vv) is available at https://github.com/tinypint/vv. This is kept up to date for our internal use but we'll submit pull requests as necessary.
+
+### Installing the VVV Dashboard
+
+Our VVV Dashboard is based off the VVV Dashboard by Leo Gopal (https://github.com/leogopal/VVV-Dashboard). To install it, run the following:
+
+    $ cd ~/Sites/Vagrant/www/default
+    $ git clone git@github.com:tinypint/VVV-Dashboard.git VVV-Dash-Files-tmp
+    $ sudo ditto VVV-Dash-Files-tmp/dashboard dashboard/
+    $ sudo ditto VVV-Dash-Files-tmp/dashboard-custom.php dashboard-custom.php
+    $ sudo rm -rf VVV-Dash-Files-tmp
+    
+This will install the dashboard which will be available at http://vvv.dev/dashboard/index.php
+
 [VirtualBox]:http://download.virtualbox.org/virtualbox/4.3.22/VirtualBox-4.3.22-98236-OSX.dmg
 [iTerm]: https://iterm2.com/downloads/stable/iTerm2_v2_0.zip
 [Vagrant]: https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2.dmg
